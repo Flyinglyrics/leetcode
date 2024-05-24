@@ -1,18 +1,18 @@
 package solutions;
+/**
+ * 7. 整数反转
+ *      https://leetcode.cn/problems/reverse-integer/description/
+ * 方法1：
+ * 思路：1.先用String.valueOf()数字转换为字符串，如果字符串首位是'-'，则标记其为负数，并且将符号截取。
+ *      2.使用StringBuilder.reverse()方法反转字符串。
+ *      3.使用Integer.parseInt()方法将字符串转换为整数。考虑到边界情况，使用try catch语句，转换失败时返回0值；
+ * 结果：
+ *		执行用时：1ms,超越36.88%Java用户
+ *      消耗内存：40.20mb,击败8，92%java用户
+ **/
 import java.util.Stack;
-
 public class Solution7 {
-	/**
-	 * 7. 整数反转
-     *      https://leetcode.cn/problems/reverse-integer/description/
-	 * 方法1：
-	 * 思路：1.先用String.valueOf()数字转换为字符串，如果字符串首位是'-'，则标记其为负数，并且将符号截取。
-	 *      2.使用StringBuilder.reverse()方法反转字符串。
-	 *      3.使用Integer.parseInt()方法将字符串转换为整数。考虑到边界情况，使用try catch语句，转换失败时返回0值；
-	 * 结果：
-	 *		执行用时：1ms,超越36.88%Java用户
-	 *      消耗内存：40.20mb,击败8，92%java用户
-	 */
+
     public static int reverse(int x) {
         String s = String.valueOf(x);
         boolean isNegative = false;
